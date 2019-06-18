@@ -1,0 +1,42 @@
+<!--Il faudra donner des indices : passer des paramètres sur le click...-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les savoirs inutiles</title>
+    <link rel="stylesheet" type="text/css" href="TPTheme3.css">
+	 <script src="jquery-3.3.1.js"></script>
+
+</head>
+<body>
+    <div id="divSaisie">
+        <div>
+            <label for="libelleSavoir">Savoir :</label><input type="text" id="libelleSavoir">
+        </div>
+        <div>
+            <label for="auteur">Auteur :</label><input type="text" id="auteur">
+        </div>
+        <div>
+            <label for="date">Date découverte :</label><input type="date" id="date">
+        </div>
+        <div>
+            <button onclick="controleur.ajouter()">Ajouter</button>
+        </div>
+    </div>
+    <div>
+        <input type="button" onclick="controleur.trier('a_az');" value="Tri par auteur - A=>Z">
+        <input type="button" onclick="controleur.trier('a_za');" value="Tri par auteur - Z=>A">
+        <input type="button" onclick="controleur.trier('d_ra');" value="Tri par date - Récent=>Ancien">
+        <input type="button" onclick="controleur.trier('d_ar');" value="Tri par date - Ancien=>Récent">
+    </div>
+    <div id="divResultat">
+        <ol id="olListeSavoir">
+
+        </ol>
+    </div>
+</body>
+<script src="bo.js"></script>
+<script src="service.js"></script>
+<script src="serviceLocalStorage.js"></script>
+<script src="controleur.js"></script>
+</html>
